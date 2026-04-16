@@ -82,7 +82,7 @@ export default function PriceChart({ data, currency }: Props) {
             fontSize: "12px",
           }}
           labelStyle={{ color: "#94a3b8" }}
-          formatter={(v: number) => [formatPrice(v, currency), "Price"]}
+          formatter={(v: any) => typeof v === "number" ? formatPrice(v, currency) : v}
         />
         <Area
           type="monotone"
