@@ -2,8 +2,8 @@ import { z } from "zod";
 
 export const createAlertSchema = z.object({
   coinID: z
-    .string({ required_error: "coinID is required" })
-    .min(1)
+    .string()
+    .min(1, { message: "coinID is required" })
     .max(50)
     .toLowerCase()
     .trim(),
@@ -17,12 +17,13 @@ export const createAlertSchema = z.object({
     .default("usd"),
 
   targetPrice: z
-    .number({ required_error: "targetPrice is required" })
+    .number()
     .positive("targetPrice must be a positive number")
-    .finite(),
+    .finite()
+    .refine((val) => val !== undefined, { message: "targetPrice is required" }),
 
   condition: z.enum(["above", "below"], {
-    errorMap: () => ({ message: 'condition must be "above" or "below"' }),
+    message: 'condition must be "above" or "below"',
   }),
 });
 
