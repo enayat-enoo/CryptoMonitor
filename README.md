@@ -2,9 +2,9 @@
 
 A real-time cryptocurrency price monitoring and alerting system with a dark dashboard UI, price history charts, and benchmarked Redis caching performance.
 
-🔴 **[Live Demo](#)** &nbsp;|&nbsp; ⌥ **[GitHub](https://github.com/enayat-enoo/crypto-price-monitor)**
+🔴 **[Live Demo](https://crypto-monitor-dun.vercel.app/)** &nbsp;|&nbsp; ⌥ **[GitHub](https://github.com/enayat-enoo/crypto-price-monitor)**
 
-![CryptoMonitor Dashboard](./preview.png)
+![CryptoMonitor Dashboard](preview.png)
 
 ---
 
